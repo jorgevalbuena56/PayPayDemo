@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "kmm-viewmodel",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rickclephas/KMM-ViewModel.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "021e8d897382568b63c26ae339c3b9a3186ef9fb"
+      }
+    },
+    {
+      "identity" : "kmp-nativecoroutines",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rickclephas/KMP-NativeCoroutines.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "954d6c185b9487fd7388c1d506758aba3b48d540"
+      }
+    },
+    {
+      "identity" : "rxswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReactiveX/RxSwift.git",
+      "state" : {
+        "revision" : "9dcaa4b333db437b0fbfaf453fad29069044a8b4",
+        "version" : "6.6.0"
+      }
+    }
+  ],
+  "version" : 2
+}

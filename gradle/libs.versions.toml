@@ -1,0 +1,79 @@
+[versions]
+# Define the dependency versions
+minSdk = "26"
+targetSdk = "33"
+compileSdk = "33"
+versionCode = "1"
+versionName = "1.0"
+kotlinCompilerExtensionVersion = "1.5.1"
+
+androidx-compose = "1.4.3"
+androidx-activity-compose = "1.7.2"
+coroutines = "1.7.3"
+gradle-plugin = "8.1.0"
+realm = "1.10.0"
+kotlin = "1.9.0"
+kotlinx-serialization-json = "1.5.1"
+kmmViewModel = "1.0.0-ALPHA-12"
+kmpNative = "1.0.0-ALPHA-14"
+ksp = "1.9.0-1.0.12"
+ktor = "2.3.2"
+koin = "3.4.2"
+
+
+[libraries]
+
+# COMPOSE
+androidx-compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "androidx-compose" }
+androidx-compose-material = { module = "androidx.compose.material:material", version.ref = "androidx-compose" }
+androidx-compose-activity = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity-compose" }
+androidx-compose-ui = { module = "androidx.compose.ui:ui" , version.ref = "androidx-compose"}
+androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "androidx-compose" }
+androidx-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" , version.ref = "androidx-compose"}
+androidx-compose-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "androidx-compose" }
+androidx-compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "androidx-compose"}
+kmm-view-model = { module = "com.rickclephas.kmm:kmm-viewmodel-core", version.ref = "kmmViewModel" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization-json" }
+
+# KTOR
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-json = { module = "io.ktor:ktor-client-json", version.ref = "ktor" }
+ktor-client-serialization = { module = "io.ktor:ktor-client-serialization", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-client-mock = { module = "io.ktor:ktor-client-mock", version.ref = "ktor" }
+ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktor" }
+ktor-client-ios = { module = "io.ktor:ktor-client-ios", version.ref = "ktor" }
+ktor-server-test-host = { module = "io.ktor:ktor-server-test-host", version.ref = "ktor"}
+ktor-server-core = { module = "io.ktor:ktor-server-core", version.ref = "ktor"}
+ktor-server-cio = { module = "io.ktor:ktor-server-cio", version.ref = "ktor"}
+
+# REALM
+realm-base = { module = "io.realm.kotlin:library-base", version.ref = "realm" }
+
+#KOIN
+koin = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-android = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin"}
+
+#mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+#mockk-agent-jvm = { module = "io.mockk:mockk-agent-jvm", version.ref = "mockk" }
+#mockk-android = { module = "io.mockk:mockk-android", version.ref = "mockk" }
+
+[bundles]
+# Define bundles/groups of libraries
+compose-ui = ["androidx-compose-ui", "androidx-compose-ui-tooling", "androidx-compose-ui-tooling-preview"]
+compose-ui-test = ["androidx-compose-ui-test-junit4", "androidx-compose-ui-test-manifest"]
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "gradle-plugin" }
+android-library = { id = "com.android.library", version.ref = "gradle-plugin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp"}
+kmp-native-coroutines = { id = "com.rickclephas.kmp.nativecoroutines", version.ref = "kmpNative"}
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+realm = { id = "io.realm.kotlin", version.ref = "realm" }
